@@ -78,11 +78,11 @@ define(['chat'], function(chat) {
 					var modal = chat.getModal(data.fromuid);
 					if (modal.length > 0) {
 						isBuzzing = true;
-						modal.addClass('animated tada');
+						modal.addClass('chat-buzz-animated chat-buzz-tada');
 						audio.play();
 						chat.appendChatMessage(modal, "You got buzzed!", Date.now())
 						setTimeout(function() {
-							modal.removeClass('animated tada');
+							modal.removeClass('chat-buzz-animated chat-buzz-tada');
 							isBuzzing = false;
 						}, 1000);
 					}
