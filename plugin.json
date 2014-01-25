@@ -1,0 +1,15 @@
+{
+    "id": "nodebb-plugin-buzzer",
+    "name": "NodeBB Chat Buzzer",
+    "description": "NodeBB plugin that will add the classic MSN buzzer to the chat!",
+    "url": "https://github.com/MrWaffle/nodebb-plugin-buzzer",
+    "library": "./library.js",
+    "hooks": [
+        { "hook": "filter:scripts.get", "method": "init.addScripts", "callbacked": false },
+        { "hook": "action:app.load", "method": "init.load", "callbacked": false }
+    ],
+    "staticDir": "./static",
+    "css": [
+        "css/style.css"
+    ]
+}
